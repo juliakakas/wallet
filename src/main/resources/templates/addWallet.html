@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Wallet</title>
+</head>
+<body>
+<form th:action="@{/addWallet}" method="post">
+  <label> Name:
+    <input th:field="*{newWallet.name}" placeholder="" type="text" id="name" title="name">
+  </label>
+  <label> Birthplace:
+    <input  th:field="*{newWallet.birthPlace}" placeholder="" type="text" id="birthplace" title="birthplace">
+  </label>
+  <label> Email address:
+    <input  th:field="*{newWallet.email}" placeholder="" type="text" id="email" title="email">
+  </label>
+
+  <button type="submit">Submit</button>
+
+</form>
+</body>
+</html>

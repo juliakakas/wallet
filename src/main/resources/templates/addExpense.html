@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Expense</title>
+</head>
+<body>
+<form th:action="@{/addExpense}" method="post">
+    <label> Id:
+        <input th:field="*{newExpense.id}" placeholder="" type="number" id="id" title="id">
+    </label>
+    <label> Expense:
+        <input  th:field="*{newExpense.payoff}" placeholder="" type="number" id="pay off" title="pay off">
+    </label>
+
+    <button type="submit">Submit</button>
+
+</form>
+</body>
+</html>

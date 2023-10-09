@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking App</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Birthplace</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tr th:each="wallet : ${wallets}">
+        <td th:text="${wallet.getId()}"></td>
+        <td th:text="${wallet.getName()}"></td>
+        <td th:text="${wallet.getBirthPlace()}"></td>
+        <td th:text="${wallet.getEmail()}"></td>
+    </tr>
+    <tr th:each="expense : ${expenses}">
+        <td th:text="${expense.getId()}"></td>
+        <td th:text="${expense.getBalance()}"></td>
+        <td th:text="${#numbers.formatCurrency(expense.getBalance())}"></td>
+        <td th:text="${expense.getPayoff()}"></td>
+        <td th:text="${#numbers.formatCurrency(expense.getPayoff()())}"></td>
+    </tr>
+</table>
+</body>
+</html>
